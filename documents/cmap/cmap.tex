@@ -1,0 +1,36 @@
+\listfiles                      % shows used files
+\documentclass[12pt]{scrartcl}
+%\usepackage{cmap}              % pure T1 fonts 
+%\usepackage[resetfonts]{cmap}  % pure T1 fonts, reset CM
+%\usepackage{mmap}              % cmap + mathematics (ASCII)
+%\usepackage[noTeX]{mmap}       % cmap + mathematics (Unicode)
+
+%\usepackage[Latin9]{inputenc}  % or utf-8
+ \usepackage[T1]{fontenc}       % font encription 
+%\usepackage[T3,T1]{fontenc}    % T3 for package tipa
+%\usepackage{tipa}              % Phonetic alphabet
+ \usepackage[ngerman]{babel}    % neue deutsche Rechtschreibung
+
+\usepackage{lmodern}           % Latin Modern
+%\usepackage{tgpagella}         % has no virtual fonts
+%\usepackage[osf]{mathpazo}     % Minuskelziffern okay
+
+\usepackage{libertine}         % Libertine Legacy (with virtual fonts)
+%\usepackage[osf]{libertine}    % mit Medivalziffern bzw. Minuskelziffern
+
+\newcommand*{\III}{\libertineGlyph{Threeroman}}
+\newcommand*{\IV}{\libertineGlyph{Fourroman}}
+
+
+\begin{document}
+\textsc{Ligaturen}: auffliegen auffinden finden Auflage Schifffahrt.
+
+\textsc{Korrekt}: auf\/fliegen auf\/finden finden Auf\/lage Schiff\/fahrt.
+
+Ziffern: 0123456789.
+
+Donau Donaudampfschiff Donaudampfschifffahrt Donaudampfschifffahrtskapitän 
+Donaudampfschifffahrtskapitän 
+Donaudampfschifffahrtskapitän Donaudampfschifffahrtskapitän 
+Donaudampfschifffahrtskapitän Donaudampfschifffahrtskapitän
+\end{document}
