@@ -1,0 +1,195 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[margin=20mm, top=25mm, bottom=25mm]{geometry}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+\usepackage{hyperref}
+\usepackage{pifont}
+\usepackage{amssymb}
+\usepackage[official]{eurosym} % Proper Euro symbol macro
+\usepackage{siunitx}         % Modern SI unit management
+\usepackage{lmodern}
+\usepackage{parskip}
+\usepackage{microtype}
+\microtypesetup{activate=false}
+
+% Configure SI Unit formatting for German locale and declare \EUR unit
+\sisetup{
+  locale = DE,
+  group-separator = {.},
+  group-minimum-digits = 4,
+  mode = text
+}
+\DeclareSIUnit{\EUR}{\text{\euro}}
+
+% Corporate Design Colors Bündnis 90/Die Grünen
+\definecolor{GruenPrimary}{HTML}{005425}   % Bündnisgrün / Tannengrün
+\definecolor{GruenAccent}{HTML}{469A32}    % Maigrün
+\definecolor{GruenLight}{HTML}{F2F7F2}     % Zarter grüner Hintergrund
+\definecolor{GruenYellow}{HTML}{FFED00}    % Sonnenblumengelb
+\definecolor{DarkText}{HTML}{1A1A1A}       % Dunkelgrau für Lesbarkeit
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=GruenPrimary,
+    urlcolor=GruenPrimary,
+    pdftitle={Haushaltsantrag 2027 - Bündnis 90/Die Grünen Plattling},
+    pdfauthor={Bündnis 90/Die Grünen Plattling}
+}
+
+% Set font to Sans Serif (clean modern aesthetic)
+\renewcommand{\familydefault}{\sfdefault}
+
+% Page Header / Footer
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\headrule}{\color{GruenPrimary}\hrule width\headwidth height \headrulewidth \vspace{2pt}}
+\fancyhead[L]{\textcolor{GruenPrimary}{\small\textbf{BÜNDNIS 90 / DIE GRÜNEN} \textbar\ STADTRAT PLATTLING}}
+\fancyhead[R]{\textcolor{gray}{\small Haushalt 2027}}
+\fancyfoot[C]{\textcolor{gray}{\small Seite \thepage}}
+
+% Section Formatting
+\titleformat{\section}
+  {\color{GruenPrimary}\normalfont\Large\bfseries}
+  {}{0pt}{}
+  [\color{GruenAccent}\titlerule]
+
+\titleformat{\subsection}
+  {\color{GruenPrimary}\normalfont\large\bfseries}
+  {}{0pt}{}
+
+\setlist[itemize]{
+    label=\textcolor{GruenAccent}{\small$\blacksquare$}, 
+    leftmargin=*, 
+    itemsep=2pt
+}
+
+\begin{document}
+
+% Title Banner
+\begin{tcolorbox}[
+    colback=GruenPrimary,
+    colframe=GruenPrimary,
+    arc=2mm,
+    boxrule=0pt,
+    left=15pt, right=15pt, top=15pt, bottom=15pt,
+    coltext=white
+]
+    {\Huge \textbf{HAUSHALTSANTRAG 2027}} \\[8pt]
+    {\Large \textbf{Bündnis 90 / Die Grünen}} \\[12pt]
+    {\small \textbf{Themen:} Hitzeschutz, öffentliche Abkühlung, Umweltbildung \& Erinnerungskultur}
+\end{tcolorbox}
+
+\vspace{5mm}
+
+\begin{table}[h!]
+\small
+\begin{tabular}{ll}
+\textbf{Absender:} & Stadtrat Martin Thoma \\
+\textbf{Empfänger:} & Erster Bürgermeister Hans Schmalhofer, Stadtverwaltung Plattling \\
+\textbf{Datum:} & 23. August 2026 \\
+\textbf{Abgabefrist:} & 1. Oktober 2026 (für Haushaltsverabschiedung im März 2027)
+\end{tabular}
+\end{table}
+
+\vspace{2mm}
+
+Sehr geehrter Herr Bürgermeister Schmalhofer,\\[4pt]
+sehr geehrte Damen und Herren der Stadtverwaltung,
+
+ich stelle folgenden Antrag zur Aufnahme in den Entwurf des Haushalts 2027:
+
+\begin{tcolorbox}[
+    colback=GruenLight,
+    colframe=GruenAccent,
+    boxrule=1pt,
+    arc=1mm,
+    title=\textbf{\textcolor{GruenPrimary}{Beschlussvorschlag}},
+    coltitle=GruenPrimary
+]
+Der Stadtrat möge beschließen, die nachfolgend aufgeführten Positionen in den Haushaltsentwurf für das Jahr 2027 aufzunehmen und der fachlichen Prüfung durch die Verwaltung zu unterziehen.
+\end{tcolorbox}
+
+\vspace{3mm}
+\pagebreak
+
+\section*{1. Anschaffung von Split-Klimageräten für städtische Gebäude}
+
+\begin{itemize}
+    \item \textbf{Finanzielle Auswirkungen:} \qty{80000}{\EUR} (Finanzhaushalt / Investitionen)
+    \item \textbf{Sperrvermerk:} Qualifizierter Sperrvermerk – Freigabe der Mittel erfolgt nach Vorlage des Raum- und Umsetzungskonzepts im Bau- und Umweltausschuss.
+    \item \textbf{Maßnahme:} Beschaffung und Installation von hocheffizienten Split-Klimageräten für ca. 20 besonders hitzebelastete Räume.
+    \item \textbf{Priorisierung:}
+    \begin{enumerate}[label=\arabic*.]
+        \item Grundschule (Schulstraße) und Mittelschule (Preysingstraße) – Fokus auf Dachgeschosse und Südseiten.
+        \item Bürgerspital (bei verbleibenden Restmitteln)
+        \item Gebäude der Stadtwerke (bei weiteren Restmitteln).
+    \end{enumerate}
+    \item \textbf{Arbeitsauftrag an die Verwaltung:} Ermittlung der vorrangigen Schulräume in Absprache mit den Schulleitungen; Prüfung der BAFA-Kälte-Klima-Richtlinie (Förderung für Geräte mit natürlichen Kältemitteln wie R290/Propan).
+    \item \textbf{Begründung:} Extreme Sommerhitze beeinträchtigt die
+          Konzentrations- und Leistungsfähigkeit von Schüler*innen und
+          Lehrkräften erheblich. Die Maßnahme dient dem Gesundheitsschutz und
+          geordneten Lernbedingungen. Die Klimaanlagen können außerdem effizient
+          zum Heizen genutzt werden.
+\end{itemize}
+
+\vspace{3mm}
+
+\begin{tcolorbox}[
+    colback=GruenPrimary,
+    colframe=GruenPrimary,
+    arc=1mm,
+    coltext=white
+]
+\textbf{Prüfauftrag zur Fördermittelakquise:}\\
+Die Verwaltung wird beauftragt, vor der Mittelverteilung Förderungen über das bayerische Programm \textit{KommKlimaFöR} sowie die Bundesförderung über die \textit{BAFA Kälte-Klima-Richtlinie} zu prüfen und entsprechende Anträge einzureichen.
+\end{tcolorbox}
+
+\section*{2. Mobil-flexibles Nebelsprüh-System zur Hitzeminderung}
+
+\begin{itemize}
+    \item \textbf{Finanzielle Auswirkungen:} \qty{8000}{\EUR} (Finanzhaushalt; ca. \qty{5000}{\EUR} Anschaffung, \qty{3000}{\EUR} Installation/Anschluss)
+    \item \textbf{Maßnahme:} Beschaffung eines Nebelsprüh-Systems (Orientierung an Systemen wie \textit{Water Oasis} / Vorbild Fürth).
+    \item \textbf{Standort:} Hauptstandort Spielplatz Preysingstraße / Sterngasse. Durch mobile Bauweise temporäre Verlegung zu Veranstaltungen möglich.
+    \item \textbf{Arbeitsauftrag an die Verwaltung:} Prüfung von Fördermitteln über das bayerische Programm \textit{KommKlimaFöR 2026} (Sonderförderung für klimafreundliche Wasseranlagen zur Kühlung auf Spielplätzen/öffentlichen Plätzen mit bis zu 50 \% Förderquote).
+    \item \textbf{Begründung \& Zielgruppe:} Verdunstungskühlung senkt punktuell die Temperatur an heißen Tagen bei minimalem Wasserverbrauch. Die Anlage schützt im Bereich des Spielplatzes täglich zahlreiche Kinder, Familien und Senioren im dicht bebauten Stadtgebiet vor extremer Hitzebelastung.
+\end{itemize}
+
+\pagebreak
+
+\section*{3. Errichtung eines Igel-Lehrpfades an der Mühlbach-Promenade}
+
+\begin{itemize}
+    \item \textbf{Finanzielle Auswirkungen:} \qty{1000}{\EUR} Sachkosten (Finanzhaushalt) zzgl. Eigenleistung des städtischen Bauhofs.
+    \item \textbf{Maßnahme:} Beschaffung des Lehrtafel-Sets des Vereins \textit{Pro Igel e.V.} und Aufstellung an der Promenade.
+    \item \textbf{Arbeitsauftrag an die Verwaltung:} Einplanung von Bauhof-Kapazitäten für Fundamente/Montage und Abstimmung der genauen Standorte.
+    \item \textbf{Begründung:} Wertvolles und kostengünstiges Umweltbildungsangebot zum Artenschutz entlang einer stark frequentierten Flaniermeile.
+\end{itemize}
+
+\vspace{3mm}
+
+\section*{4. Verlegung von „Stolpersteinen“ zur Erinnerungskultur}
+
+\begin{itemize}
+    \item \textbf{Finanzielle Auswirkungen:} \qty{2000}{\EUR} (Verwaltungshaushalt für Anschubkosten \& Recherche)
+    \item \textbf{Maßnahme:} Grundsatzbeschluss zur Genehmigung der Verlegung auf städtischem Grund (Projekt Gunter Demnig); Einleitung von Recherchen zu NS-Opfern in Plattling mit Stadtarchiv und Schulen; Auflegung eines Patenschaftsmodells (\qty{120}{\EUR}--\qty{150}{\EUR} pro Stein).
+    \item \textbf{Begründung:} Macht lokale Geschichte im Alltag sichtbar, stärkt das Geschichtsbewusstsein und bietet ein praxisnahes Geschichtsprojekt für Plattlinger Schulen.
+\end{itemize}
+
+\vspace{5mm}
+
+
+
+\vspace{8mm}
+
+\noindent
+Mit freundlichen Grüßen,\\[12pt]
+\textbf{Martin Thoma}\\
+{\small Stadtrat, Fraktion Bündnis 90/Die Grünen Plattling}
+
+\end{document}
