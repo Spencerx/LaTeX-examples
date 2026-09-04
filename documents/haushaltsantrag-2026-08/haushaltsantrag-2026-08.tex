@@ -10,14 +10,16 @@
 \usepackage{hyperref}
 \usepackage{pifont}
 \usepackage{amssymb}
-\usepackage[official]{eurosym} % Proper Euro symbol macro
-\usepackage{siunitx}         % Modern SI unit management
+\usepackage[official]{eurosym}
+\usepackage{siunitx}
 \usepackage{lmodern}
 \usepackage{parskip}
+\usepackage{booktabs}
+\usepackage{tabularx}
 \usepackage{microtype}
 \microtypesetup{activate=false}
 
-% Configure SI Unit formatting for German locale and declare \EUR unit
+% SI-Unit Setup & Euro-Deklaration
 \sisetup{
   locale = DE,
   group-separator = {.},
@@ -38,22 +40,22 @@
     linkcolor=GruenPrimary,
     urlcolor=GruenPrimary,
     pdftitle={Haushaltsantrag 2027 - Bündnis 90/Die Grünen Plattling},
-    pdfauthor={Bündnis 90/Die Grünen Plattling}
+    pdfauthor={Martin Thoma - Stadtrat Plattling}
 }
 
 % Set font to Sans Serif (clean modern aesthetic)
 \renewcommand{\familydefault}{\sfdefault}
 
-% Page Header / Footer
+% Kopf- und Fußzeile
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{1pt}
 \renewcommand{\headrule}{\color{GruenPrimary}\hrule width\headwidth height \headrulewidth \vspace{2pt}}
 \fancyhead[L]{\textcolor{GruenPrimary}{\small\textbf{BÜNDNIS 90 / DIE GRÜNEN} \textbar\ STADTRAT PLATTLING}}
-\fancyhead[R]{\textcolor{gray}{\small Haushalt 2027}}
-\fancyfoot[C]{\textcolor{gray}{\small Seite \thepage}}
+\fancyhead[R]{\textcolor{gray}{\small Haushaltsantrag 2027}}
+\fancyfoot[C]{\textcolor{gray}{\small Seite \thepage\ von 5}}
 
-% Section Formatting
+% Überschriften
 \titleformat{\section}
   {\color{GruenPrimary}\normalfont\Large\bfseries}
   {}{0pt}{}
@@ -71,13 +73,16 @@
 
 \begin{document}
 
-% Title Banner
+% ==============================================================================
+% SEITE 1: VORBLATT & ÜBERSICHT
+% ==============================================================================
+
 \begin{tcolorbox}[
     colback=GruenPrimary,
     colframe=GruenPrimary,
     arc=2mm,
     boxrule=0pt,
-    left=15pt, right=15pt, top=15pt, bottom=15pt,
+    left=12pt, right=12pt, top=12pt, bottom=12pt,
     coltext=white
 ]
     {\Huge \textbf{HAUSHALTSANTRAG 2027}} \\[8pt]
@@ -90,7 +95,7 @@
 \begin{table}[h!]
 \small
 \begin{tabular}{ll}
-\textbf{Absender:} & Stadtrat Martin Thoma \\
+\textbf{Absender:} & Stadtrat Martin Thoma (Bündnis 90/Die Grünen) \\
 \textbf{Empfänger:} & Erster Bürgermeister Hans Schmalhofer, Stadtverwaltung Plattling \\
 \textbf{Datum:} & 23. August 2026 \\
 \textbf{Abgabefrist:} & 1. Oktober 2026 (für Haushaltsverabschiedung im März 2027)
@@ -102,7 +107,8 @@
 Sehr geehrter Herr Bürgermeister Schmalhofer,\\[4pt]
 sehr geehrte Damen und Herren der Stadtverwaltung,
 
-ich stelle folgenden Antrag zur Aufnahme in den Entwurf des Haushalts 2027:
+ich stelle hiermit folgenden Antrag zur Aufnahme in den Entwurf des
+Haushaltsplans 2027:
 
 \begin{tcolorbox}[
     colback=GruenLight,
@@ -116,80 +122,143 @@ Der Stadtrat möge beschließen, die nachfolgend aufgeführten Positionen in den
 \end{tcolorbox}
 
 \vspace{3mm}
-\pagebreak
+
+\subsection*{Übersicht der beantragten Maßnahmen}
+
+\begin{table}[h!]
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\textwidth}{p{4.8cm} r p{3.2cm} X}
+\toprule
+\textbf{Maßnahme} & \textbf{Ansatz 2027} & \textbf{Haushalt} & \textbf{Mögliche Förderung} \\
+\midrule
+\textbf{1. Split-Klimageräte} & \qty{80000}{\EUR} & Finanzhaushalt & BEG EM / NKI Kommunalrichtlinie \\
+\textbf{2. Nebelsprüh-System} & \qty{8000}{\EUR} & Finanzhaushalt & KommKlimaFöR 2026 (\SI{50}{\percent}--\SI{90}{\percent}) \\
+\textbf{3. Igel-Lehrpfad} & \qty{1000}{\EUR} & Finanzhaushalt & Naturschutzfonds / Regionalbudget \\
+\textbf{4. Stolpersteine} & \qty{2000}{\EUR} & Verwaltungshaushalt & Refinanzierung via Patenschaften \\
+\midrule
+\textbf{Gesamtvolumen} & \textbf{\qty{91000}{\EUR}} & & \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\vfill
+
+\noindent
+Mit freundlichen Grüßen,\\[10pt]
+\textbf{Martin Thoma}\\
+{\small Stadtrat, Bündnis 90/Die Grünen Plattling}
+
+\clearpage
+
+% ==============================================================================
+% SEITE 2: THEMA 1 - KLIMAGERÄTE
+% ==============================================================================
 
 \section*{1. Anschaffung von Split-Klimageräten für städtische Gebäude}
 
 \begin{itemize}
     \item \textbf{Finanzielle Auswirkungen:} \qty{80000}{\EUR} (Finanzhaushalt / Investitionen)
-    \item \textbf{Sperrvermerk:} Qualifizierter Sperrvermerk – Freigabe der Mittel erfolgt nach Vorlage des Raum- und Umsetzungskonzepts im Bau- und Umweltausschuss.
-    \item \textbf{Maßnahme:} Beschaffung und Installation von hocheffizienten Split-Klimageräten für ca. 20 besonders hitzebelastete Räume.
-    \item \textbf{Priorisierung:}
+    \item \textbf{Sperrvermerk:} Qualifizierter Sperrvermerk – Die Freigabe der Haushaltsmittel erfolgt nach Vorlage und Genehmigung des Raum- und Umsetzungskonzepts im Haupt- und Finanzausschuss bzw. Bauausschuss.
+    \item \textbf{Maßnahme:} Beschaffung und fachgerechte Installation von hocheffizienten Split-Klimageräten für ca. 20 besonders stark hitzebelastete Räume im städtischen Gebäudebestand.
+    \item \textbf{Priorisierung der Gebäude:}
     \begin{enumerate}[label=\arabic*.]
-        \item Grundschule (Schulstraße) und Mittelschule (Preysingstraße) – Fokus auf Dachgeschosse und Südseiten.
-        \item Bürgerspital (bei verbleibenden Restmitteln)
-        \item Gebäude der Stadtwerke (bei weiteren Restmitteln).
+        \item Grundschule (Schulstraße) und Mittelschule (Preysingstraße) – mit Fokus auf Dachgeschosse und nach Süden/Westen ausgerichtete Klassenzimmer.
+        \item Bürgerspital (bei verbleibenden Budgetmitteln).
+        \item Verwaltungsgebäude der Stadtwerke (bei weiteren Restmitteln).
     \end{enumerate}
-    \item \textbf{Arbeitsauftrag an die Verwaltung:} Ermittlung der vorrangigen Schulräume in Absprache mit den Schulleitungen; Prüfung der BAFA-Kälte-Klima-Richtlinie (Förderung für Geräte mit natürlichen Kältemitteln wie R290/Propan).
-    \item \textbf{Begründung:} Extreme Sommerhitze beeinträchtigt die
-          Konzentrations- und Leistungsfähigkeit von Schüler*innen und
-          Lehrkräften erheblich. Die Maßnahme dient dem Gesundheitsschutz und
-          geordneten Lernbedingungen. Die Klimaanlagen können außerdem effizient
-          zum Heizen genutzt werden.
+    \item \textbf{Mögliche Förderprogramme:}
+    \begin{itemize}[label=\textcolor{GruenAccent}{\small\textendash}]
+        \item \textit{BAFA / KfW Bundesförderung für effiziente Gebäude (BEG EM):} Förderung von energieeffizienter Anlagentechnik bei Nutzung von Split-Geräten mit Wärmepumpenfunktion und natürlichen Kältemitteln (z.\,B. R290/Propan).
+        \item \textit{Kommunalrichtlinie (NKI):} Unterstützung bei investiven Maßnahmen zum sommerlichen Wärmeschutz an Schulen.
+    \end{itemize}
+    \item \textbf{Arbeitsauftrag an die Verwaltung:} Ermittlung der vorrangig zu
+    ertüchtigenden Unterrichtsräume in enger Abstimmung mit den jeweiligen
+    Schulleitungen sowie Klärung der baulichen Voraussetzungen und
+    Förderantragsfristen.
+    \item \textbf{Begründung:} Extreme sommerliche Hitzeperioden beeinträchtigen
+    die Konzentrations-, Lern- und Leistungsfähigkeit von Schülerinnen, Schülern
+    und Lehrkräften messbar. Die Maßnahme dient dem aktiven Gesundheitsschutz
+    sowie verlässlichen Arbeitsbedingungen. Durch moderne Wärmepumpentechnik
+    können die Anlagen zudem in den Übergangsmonaten hocheffizient zum Heizen
+    genutzt werden.
 \end{itemize}
 
-\vspace{3mm}
+\clearpage
 
-\begin{tcolorbox}[
-    colback=GruenPrimary,
-    colframe=GruenPrimary,
-    arc=1mm,
-    coltext=white
-]
-\textbf{Prüfauftrag zur Fördermittelakquise:}\\
-Die Verwaltung wird beauftragt, vor der Mittelverteilung Förderungen über das bayerische Programm \textit{KommKlimaFöR} sowie die Bundesförderung über die \textit{BAFA Kälte-Klima-Richtlinie} zu prüfen und entsprechende Anträge einzureichen.
-\end{tcolorbox}
+% ==============================================================================
+% SEITE 3: THEMA 2 - NEBELSPRÜH-SYSTEM
+% ==============================================================================
 
 \section*{2. Mobil-flexibles Nebelsprüh-System zur Hitzeminderung}
 
 \begin{itemize}
-    \item \textbf{Finanzielle Auswirkungen:} \qty{8000}{\EUR} (Finanzhaushalt; ca. \qty{5000}{\EUR} Anschaffung, \qty{3000}{\EUR} Installation/Anschluss)
-    \item \textbf{Maßnahme:} Beschaffung eines Nebelsprüh-Systems (Orientierung an Systemen wie \textit{Water Oasis} / Vorbild Fürth).
-    \item \textbf{Standort:} Hauptstandort Spielplatz Preysingstraße / Sterngasse. Durch mobile Bauweise temporäre Verlegung zu Veranstaltungen möglich.
-    \item \textbf{Arbeitsauftrag an die Verwaltung:} Prüfung von Fördermitteln über das bayerische Programm \textit{KommKlimaFöR 2026} (Sonderförderung für klimafreundliche Wasseranlagen zur Kühlung auf Spielplätzen/öffentlichen Plätzen mit bis zu 50 \% Förderquote).
-    \item \textbf{Begründung \& Zielgruppe:} Verdunstungskühlung senkt punktuell die Temperatur an heißen Tagen bei minimalem Wasserverbrauch. Die Anlage schützt im Bereich des Spielplatzes täglich zahlreiche Kinder, Familien und Senioren im dicht bebauten Stadtgebiet vor extremer Hitzebelastung.
+    \item \textbf{Finanzielle Auswirkungen:} \qty{8000}{\EUR} (Finanzhaushalt; ca. \qty{5000}{\EUR} Anschaffung, ca. \qty{3000}{\EUR} Installation, Montage und Anschlüsse)
+    \item \textbf{Maßnahme:} Beschaffung eines mobil-flexiblen Nebelsprüh-Systems zur Verdunstungskühlung im öffentlichen Raum (technische Orientierung an Systemen wie \textit{Water Oasis} in Fürth).
+    \item \textbf{Standortkonzept:} 
+    \begin{itemize}[label=\textcolor{GruenAccent}{\small\textendash}]
+        \item \textit{Hauptstandort:} Spielplatz Preysingstraße / Sterngasse (dicht bebauter Bereich).
+        \item \textit{Mobile Nutzung:} temporäre Umsetzung zu innerstädtischen Veranstaltungen (z.\,B. Volksfestplatz, Nibelungenfest)
+    \end{itemize}
+    \item \textbf{Mögliche Förderprogramme:}
+    \begin{itemize}[label=\textcolor{GruenAccent}{\small\textendash}]
+        \item \textit{KommKlimaFöR 2026 (Freistaat Bayern):} Explizite Förderung von investiven Klimaanpassungsmaßnahmen wie „klimafreundlichen Wasseranlagen zur Kühlung der Umgebung“ auf öffentlichen Plätzen und Spielplätzen. Reguläre Förderquote bis zu \SI{50}{\percent} (bei Bedarf bis zu \SI{90}{\percent}).
+    \end{itemize}
+    \item \textbf{Arbeitsauftrag an die Verwaltung:} Technische Prüfung der örtlichen Wasseranschluss am Spielplatz sowie Einreichung des Förderantrags über die Fördermanagementplattform Bayern (FMP) vor Auftragsvergabe.
+    \item \textbf{Begründung \& Schutzwirkung:} Feine Hochdruck-Verdunstungskühlung senkt die gefühlte Umgebungstemperatur an Hitzetagen spürbar ab, ohne Nässe zu erzeugen, und benötigt dabei nur minimale Wassermengen. Die Anlage schützt im Bereich des Spielplatzes täglich zahlreiche Kinder und Eltern vor akuter Hitzebelastung.
 \end{itemize}
 
-\pagebreak
+\clearpage
+
+% ==============================================================================
+% SEITE 4: THEMA 3 - IGEL-LEHRPFAD
+% ==============================================================================
 
 \section*{3. Errichtung eines Igel-Lehrpfades an der Mühlbach-Promenade}
 
 \begin{itemize}
-    \item \textbf{Finanzielle Auswirkungen:} \qty{1000}{\EUR} Sachkosten (Finanzhaushalt) zzgl. Eigenleistung des städtischen Bauhofs.
-    \item \textbf{Maßnahme:} Beschaffung des Lehrtafel-Sets des Vereins \textit{Pro Igel e.V.} und Aufstellung an der Promenade.
-    \item \textbf{Arbeitsauftrag an die Verwaltung:} Einplanung von Bauhof-Kapazitäten für Fundamente/Montage und Abstimmung der genauen Standorte.
-    \item \textbf{Begründung:} Wertvolles und kostengünstiges Umweltbildungsangebot zum Artenschutz entlang einer stark frequentierten Flaniermeile.
+    \item \textbf{Finanzielle Auswirkungen:} \qty{1000}{\EUR} Sachkosten (Finanzhaushalt) für Beschilderung und Infotafeln zuzüglich der bauseitigen Eigenleistung durch den städtischen Bauhof.
+    \item \textbf{Maßnahme:} Beschaffung des praxiserprobten, kindgerechten Lehrtafel-Sets des Vereins \textit{Pro Igel e.V.} und dauerhafte Aufstellung entlang der Mühlbach-Promenade.
+    \item \textbf{Mögliche Förderprogramme:}
+    \begin{itemize}[label=\textcolor{GruenAccent}{\small\textendash}]
+        \item \textit{Bayerischer Naturschutzfonds / Umweltstiftungen:} Förderung lokaler Projekte zur Natur- und Artenschutzbildung im Siedlungsraum.
+        \item \textit{ILE-Regionalbudget / Kleinprojekte:} Bis zu \SI{80}{\percent} Fördersatz für gemeinwohlorientierte Kleinmaßnahmen im ländlichen Raum.
+    \end{itemize}
+    \item \textbf{Arbeitsauftrag an die Verwaltung:} Einplanung der benötigten Bauhof-Kapazitäten für Fundamente, Pfosten und Montagearbeiten sowie Festlegung der genauen Tafelstandorte entlang des Spazierwegs.
+    \item \textbf{Begründung:} Der Igel steht als Leitart für einen artenreichen Garten- und Siedlungsraum, gerät jedoch zunehmend unter Druck. Ein Igel-Lehrpfad schafft mit minimalem finanziellem Aufwand ein dauerhaftes, interaktives Umweltbildungsangebot für Spaziergänger, Familien, Kindergärten und Schulklassen entlang einer der meistfrequentierten Naherholungsachsen Plattlings.
 \end{itemize}
 
-\vspace{3mm}
+\clearpage
+
+% ==============================================================================
+% SEITE 5: THEMA 4 - STOLPERSTEINE & PRÜFAUFTRAG
+% ==============================================================================
 
 \section*{4. Verlegung von „Stolpersteinen“ zur Erinnerungskultur}
 
 \begin{itemize}
-    \item \textbf{Finanzielle Auswirkungen:} \qty{2000}{\EUR} (Verwaltungshaushalt für Anschubkosten \& Recherche)
-    \item \textbf{Maßnahme:} Grundsatzbeschluss zur Genehmigung der Verlegung auf städtischem Grund (Projekt Gunter Demnig); Einleitung von Recherchen zu NS-Opfern in Plattling mit Stadtarchiv und Schulen; Auflegung eines Patenschaftsmodells (\qty{120}{\EUR}--\qty{150}{\EUR} pro Stein).
-    \item \textbf{Begründung:} Macht lokale Geschichte im Alltag sichtbar, stärkt das Geschichtsbewusstsein und bietet ein praxisnahes Geschichtsprojekt für Plattlinger Schulen.
+    \item \textbf{Finanzielle Auswirkungen:} \qty{2000}{\EUR} (Verwaltungshaushalt als Anschubfinanzierung für wissenschaftliche/lokalhistorische Recherche und organisatorische Vorbereitung).
+    \item \textbf{Maßnahme:} 
+    \begin{enumerate}[label=\arabic*.]
+        \item Grundsatzbeschluss des Stadtrats zur Genehmigung der Verlegung von Messing-Gedenksteinen auf städtischem Grund (im Rahmen des europaweiten Projekts von Gunter Demnig).
+        \item Einleitung und Begleitung von Recherchen zu NS-Opfern mit Bezug zu Plattling in Kooperation mit dem Stadtarchiv, Historiker*innen und den weiterführenden Schulen.
+        \item Einrichtung eines transparenten Patenschaftsmodells zur Finanzierung der eigentlichen Steine (\qty{120}{\EUR} bis \qty{150}{\EUR} je Stein).
+    \end{enumerate}
+    \item \textbf{Refinanzierung:} Die Anschaffungs- und Verlegekosten der einzelnen Steine werden vollumfänglich über private Patenschaften von Bürgerinnen und Bürgern, Vereinen, Parteien, Firmen oder Schulen gegen Spendenbescheinigung getragen.
+    \item \textbf{Begründung:} Stolpersteine verankern das Gedenken an Opfer von Verfolgung und Gewaltherrschaft mitten im alltäglichen Lebensraum. Sie machen Regionalgeschichte greifbar, wirken geschichtsrevisionistischen Tendenzen entgegen und bieten Jugendlichen eine wertvolle Plattform für praxisnahe historische Projektarbeit vor Ort.
 \end{itemize}
-
-\vspace{5mm}
-
-
 
 \vspace{8mm}
 
-\noindent
-Mit freundlichen Grüßen,\\[12pt]
-\textbf{Martin Thoma}\\
-{\small Stadtrat, Fraktion Bündnis 90/Die Grünen Plattling}
+\begin{tcolorbox}[
+    colback=GruenPrimary,
+    colframe=GruenPrimary,
+    arc=1.5mm,
+    boxrule=0pt,
+    coltext=white
+]
+\textbf{\large Gesamtheitlicher Prüfauftrag zur Fördermittelakquise}\\[4pt]
+Die Stadtverwaltung wird beauftragt, vor der Mittelbewirtschaftung für die investiven Positionen (Klimaanpassung und Gebäudetechnik) alle einschlägigen Förderzugänge – insbesondere das Programm \textit{KommKlimaFöR 2026}, die \textit{Bundesförderung für effiziente Gebäude (BEG)} sowie das \textit{Regionalbudget} – vollumfänglich zu prüfen und entsprechende Zuwendungsanträge fristgerecht vor Maßnahmebeginn einzureichen.
+\end{tcolorbox}
 
 \end{document}
